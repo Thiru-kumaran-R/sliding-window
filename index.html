@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sliding Window Patterns & Algorithms Guide</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="app-container">
+      <!-- Sidebar Navigation -->
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-content">
+          <div class="sidebar-header">
+            <h3>Quick Navigation</h3>
+            <button id="sidebar-toggle" class="sidebar-toggle">✕</button>
+          </div>
+          <nav class="sidebar-nav" id="sidebar-nav">
+            <!-- Navigation items will be generated dynamically -->
+          </nav>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-container">
+        <!-- Header Section -->
+        <header class="header">
+          <div class="header-content">
+            <button id="menu-toggle" class="menu-toggle">☰</button>
+            <h1 class="header-title">
+              Sliding Window Patterns & Algorithms Guide
+            </h1>
+            <div class="stats-container">
+              <div class="stat-item">
+                <span class="stat-number">10</span>
+                <span class="stat-label">Patterns</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">26+</span>
+                <span class="stat-label">LeetCode Problems</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">5</span>
+                <span class="stat-label">Easy</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">13</span>
+                <span class="stat-label">Medium</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">8</span>
+                <span class="stat-label">Hard</span>
+              </div>
+            </div>
+            <div class="header-actions">
+              <input
+                type="text"
+                id="search-input"
+                class="form-control search-input"
+                placeholder="Search patterns, problems, or algorithms..."
+              />
+              <select
+                id="difficulty-filter"
+                class="form-control"
+                title="Sliding"
+              >
+                <option value="all">All Difficulties</option>
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+              </select>
+              <button id="theme-toggle" class="btn btn--outline">🌓</button>
+              <button id="generate-pdf-btn" class="btn btn--primary btn--lg">
+                <span id="btn-text">Generate PDF</span>
+                <span id="loading-text" class="hidden">Generating...</span>
+              </button>
+            </div>
+          </div>
+        </header>
+
+        <!-- Progress Indicator -->
+        <div id="progress-indicator" class="progress-indicator hidden">
+          <div class="progress-content">
+            <div class="progress-bar">
+              <div class="progress-fill"></div>
+            </div>
+            <p class="progress-text">
+              Generating comprehensive PDF with visualizations...
+            </p>
+          </div>
+        </div>
+
+        <!-- Patterns Section -->
+        <section class="patterns-section">
+          <h2 class="section-title">Explore Sliding Window Patterns</h2>
+          <div class="patterns-grid" id="patterns-grid">
+            <!-- Pattern cards will be dynamically generated -->
+          </div>
+        </section>
+
+        <!-- Tips Section -->
+        <section class="tips-section" id="tips-section">
+          <div class="tips-header">
+            <h2 class="section-title">Interview Tips & Common Mistakes</h2>
+            <button id="tips-toggle" class="btn btn--outline">Show Tips</button>
+          </div>
+
+          <div class="tips-content hidden" id="tips-content">
+            <div class="tips-grid">
+              <div class="tips-card">
+                <h3>💡 Essential Tips</h3>
+                <ul id="tips-list">
+                  <!-- Tips will be populated here -->
+                </ul>
+              </div>
+
+              <div class="tips-card">
+                <h3>⚠️ Common Mistakes</h3>
+                <ul id="mistakes-list">
+                  <!-- Mistakes will be populated here -->
+                </ul>
+              </div>
+
+              <div class="tips-card">
+                <h3>🎯 Interview Strategy</h3>
+                <ul id="strategy-list">
+                  <!-- Strategy will be populated here -->
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Mobile Overlay -->
+    <div class="mobile-overlay" id="mobile-overlay"></div>
+
+    <script src="java.js"></script>
+  </body>
+</html>
